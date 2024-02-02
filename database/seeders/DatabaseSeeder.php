@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Type;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +22,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call(ProjectSeeder::class);
+        $this->call([
+            TypeSeeder::class,
+            ProjectSeeder::class
+        ]);
     }
 }
